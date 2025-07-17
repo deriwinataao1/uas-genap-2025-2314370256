@@ -183,7 +183,7 @@
   <!-- Hero Section -->
   <main class="relative w-full px-4 md:px-8 py-20 flex flex-col md:flex-row items-center md:items-start min-h-[600px] overflow-hidden bg-white">
 
-    
+
     <!-- Left Text -->
     <div class="md:w-1/2 z-10 space-y-6 max-w-lg">
       <p class="text-sm font-semibold text-blue-700 tracking-widest uppercase animate-fadeInLeft" style="animation-delay: 0.2s;">
@@ -202,12 +202,12 @@
 
     <!-- Right Product Image -->
 <div class="md:w-1/2 relative z-0 mt-10 md:mt-0 flex justify-center md:justify-end">
-  <img src="{{ asset('images/unggulan.jpeg') }}" 
-    alt="Produk unggulan toko" 
-    class="max-w-full w-[480px] h-auto drop-shadow-xl" 
+  <img src="{{ asset('images/unggulan.jpeg') }}"
+    alt="Produk unggulan toko"
+    class="max-w-full w-[480px] h-auto drop-shadow-xl"
     onerror="this.style.display='none'" />
 </div>
-
+//tess
 
     <!-- Background Element -->
     <div class="hero-bg"></div>
