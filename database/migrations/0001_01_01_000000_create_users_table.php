@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('photo')->nullable(); // untuk upload foto profil
+            $table->string('photo')->nullable();
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('role', ['admin', 'user'])->default('user'); // role admin/user
+            $table->enum('role', ['admin', 'user'])->default('user'); 
             $table->rememberToken();
             $table->timestamps();
         });

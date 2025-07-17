@@ -18,10 +18,16 @@ class ProductController extends Controller
     }
     public function daftar()
     {
-        $products = Product::with('category')->latest()->get();
-        $categories = Category::all(); // Ambil semua kategori
+        $products = Product::with('category')
+            ->where('is_publish', 1) // Hanya produk yang dipublish
+            ->latest()
+            ->get();
+    
+        $categories = Category::all(); // Tetap ambil semua kategori
+    
         return view('products.daftar', compact('products', 'categories'));
     }
+    
 
     public function create()
     {

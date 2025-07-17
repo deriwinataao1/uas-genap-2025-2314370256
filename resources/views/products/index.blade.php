@@ -243,20 +243,20 @@
                 @forelse ($products as $product)
                 <tr class="border-t hover:bg-gray-50">
                     <td class="px-6 py-4">{{ $loop->iteration }}</td>
-                    <td class="px-6 py-4">{{ $product->name }}</td>
                     <td class="px-6 py-4">
                         @if ($product->image_url)
-                            <img 
-                                src="{{ asset('storage/' . $product->image_url) }}" 
-                                alt="Gambar Produk" 
-                                class="w-16 h-16 object-cover cursor-pointer transition duration-200 hover:scale-105"
-                                onclick="showImageModal('{{ asset('storage/' . $product->image_url) }}')"
-                            >
+                        <img 
+                        src="{{ asset('storage/' . $product->image_url) }}" 
+                        alt="Gambar Produk" 
+                        class="w-16 h-16 object-cover cursor-pointer transition duration-200 hover:scale-105"
+                        onclick="showImageModal('{{ asset('storage/' . $product->image_url) }}')"
+                        >
                         @else
-                            <span class="text-gray-400 italic">Tidak ada gambar</span>
+                        <span class="text-gray-400 italic">Tidak ada gambar</span>
                         @endif
                     </td>
-
+                    <td class="px-6 py-4">{{ $product->name }}</td>
+                    
                     <td class="px-6 py-4">
                         <div x-data="{ expanded: false }">
                             <template x-if="!expanded">

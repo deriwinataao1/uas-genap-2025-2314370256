@@ -8,11 +8,11 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\IsAdmin; // middleware custom
+use App\Http\Middleware\IsAdmin; 
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
@@ -55,18 +55,13 @@ Route::middleware('auth')->group(function () {
 // Route khusus ADMIN menggunakan middleware IsAdmin
 Route::middleware(['auth', IsAdmin::class])->group(function () {
 
-
-
 Route::get('categories', [CategoryController::class, 'index'])->name('admin.categories');
 Route::get('categories/create', [CategoryController::class, 'create'])->name('categories.create');
 Route::post('categories', [CategoryController::class, 'store'])->name('categories.store');
 Route::get('categories/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
 Route::put('categories/{category}', [CategoryController::class, 'update'])->name('categories.update');
 Route::delete('categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
-
 Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
-
-
 
 });
 
