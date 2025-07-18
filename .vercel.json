@@ -1,18 +1,16 @@
 {
-  "version": 2,
   "builds": [
     { "src": "api/index.php", "use": "@vercel/php" }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/index.php"
-    }
+      "dest": "/api/index.php"}
   ],
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "true",
-    "APP_URL": "https://uas-genap-2025-2314370256.vercel.app",
+    "APP_URL": "https://uas-genap-2025-2314370256-fmzi2sn1x.vercel.app",
     "APP_KEY": "base64:dfVPeL9uVqKTwpbKG/h8xU5DTlfX55X4SNIfWyNOXwI=",
     "LOG_CHANNEL": "stderr",
     "CACHE_DRIVER": "array",
