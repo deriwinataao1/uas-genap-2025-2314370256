@@ -1,1 +1,8 @@
-vendor
+node_modules/
+resources/
+storage/
+bootstrap/
+vite.config.js
+tailwind.config.js
+*.config.js
+vite/
